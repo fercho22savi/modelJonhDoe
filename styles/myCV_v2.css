@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+}
+
+.cv-container {
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 2rem auto;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: #1e293b;
+    color: aqua;
+    width: 30%;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.font-medium{
+    color:aqua;
+}
+.main-content {
+    width: 70%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#photo-upload-area {
+    position: relative;
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1rem;
+}
+
+#photo-upload-area img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#file-input {
+    display: none;
+}
+
+.upload-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 9999px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#photo-upload-area:hover .upload-button {
+    opacity: 1;
+}
+
+.source-code-pro-unique {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilos impresión */
+@media print {
+    body {
+        background-color: white;
+        box-shadow: none;
+    }
+
+    .cv-container {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        background-color: #1a202c !important;
+        color: white !important;
+    }
+
+    .upload-button {
+        display: none;
+    }
+}

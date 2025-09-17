@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Currículum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/myCV_v2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2627b65e96.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center p-4">
+    <div id="cv-template" class="cv-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Foto de Perfil -->
+            <div class="text-center">
+                <div id="photo-upload-area" class="rounded-full overflow-hidden mx-auto mb-4">
+                    <img id="cv-image" class="rounded-full w-24 h-24 mx-auto mb-4"
+                        src="https://placehold.co/96x96/FFFFFF/334155?text=Foto" alt="Foto de perfil">
+                    <label for="file-input" class="upload-button">Subir Foto</label>
+                </div>
+                <input type="file" id="file-input" accept="image/*">
+                <h1 id="cv-name" class="text-2xl font-bold"></h1>
+                <p id="cv-job-title" class="text-gray-300"></p>
+            </div>
+
+            <!-- Contacto -->
+            <section class="space-y-2">
+                <h2 class="text-lg font-semibold border-b border-gray-500 pb-2"><i class="fa-solid fa-address-card"></i>
+                    <span>Contacto</span>
+                </h2>
+                <p class="text-sm">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="font-bold">Email:</span> 
+                <span id="cv-email"></span>
+            </p>
+                <p class="text-sm">
+                <i class="fa-solid fa-mobile"></i>
+                <span class="font-bold">Teléfono:</span>
+                 <span id="cv-phone"></span>
+                </p>
+                <p class="text-sm">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="font-bold">Ubicación:</span>
+                    <span id="cv-address"></span>
+                </p>
+                <p class="text-sm">
+                <i class="fa-brands fa-github"></i>
+                <span class="font-bold">GitHub:</span>
+                <a href="#" id="cv-github"class="text-blue-300 hover:underline"></a>
+                </p>
+                <p class="text-sm">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="font-bold">LinkedIn:</span>
+                <a href="#" id="cv-linkedin" class="text-blue-300 hover:underline"></a>
+            </p>
+            <p class="text-sm">
+                <i class="fa-brands fa-discord"></i>
+                <span class="font-bold">Discord:</span>
+                <span id="cv-discord"></span>
+             </p>
+            </section>
+
+            <!-- Habilidades Técnicas -->
+            <section>
+                <h2 class="text-lg font-semibold border-b border-gray-500 pb-2">Habilidades Técnicas</h2>
+                <ul id="cv-technical-skills" class="mt-2 space-y-1 text-sm list-none pl-0"></ul>
+            </section>
+
+            <!-- Idiomas -->
+            <section>
+                <h2 class="text-lg font-semibold border-b border-gray-500 pb-2">Idiomas</h2>
+                <ul id="cv-languages" class="mt-2 space-y-1 text-sm list-none pl-0"></ul>
+            </section>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="main-content">
+            <!-- Resumen -->
+            <section>
+                <h2 class="section-title text-gray-800">
+                    Resumen Profesional
+                </h2>
+                <p id="cv-summary" class="mt-2 text-gray-700 leading-relaxed"></p>
+            </section>
+
+            <!-- Historia Laboral -->
+            <section>
+                <h2 class="section-title text-gray-800">Historia Laboral</h2>
+                <div id="cv-work-history" class="mt-4 space-y-6"></div>
+            </section>
+            <!-- Proyectos -->
+            <section>
+                <h2 class="section-title text-gray-800">Proyectos Destacados</h2>
+                <div id="cv-projects" class="mt-4 space-y-6"></div>
+            </section>
+            <!-- Educación -->
+            <section>
+                <h2 class="section-title text-gray-800">Educación</h2>
+                <div id="cv-education" class="mt-4 space-y-6"></div>
+            </section>
+            <!-- Certificaciones -->
+            <section>
+                <h2 class="section-title text-gray-800">Certificaciones</h2>
+                <div id="cv-certifications" class="mt-4 space-y-6"></div>
+            </section>
+            <!-- Cursos -->
+            <section>
+                <h2 class="section-title text-gray-800">Cursos</h2>
+                <div id="cv-courses" class="mt-4 space-y-6"></div>
+            </section>
+            <!-- Referencias -->
+            <section>
+                <h2 class="section-title text-gray-800">Referencias</h2>
+                <div id="cv-references" class="mt-4 space-y-6"></div>
+            </section>
+        </div>
+    </div>
+    <script src="scripts/myCV_v2.js"></script>
+    </body>
+</html>
